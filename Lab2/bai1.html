@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //Nhập vào 3 số nguyên  a, b,c từ bàn phím
+        let a = prompt("Nhap a: ");
+        let b = prompt("Nhap b: ");
+        let c = prompt("Nhap c: ");
+
+        let a1 = parseInt(a);
+        let b1 = parseInt(b);    
+        let c1 = parseInt(c);
+
+        let delta = Math.pow(b, 2) - 4 *a *c;
+        if(delta < 0) {          
+           document.writeln("phương trình vô nghiệm");
+        }
+        else if(delta == 0) {
+           x = -b / (2*a);
+           document.writeln("Phương trình có nghiệm kép x=", +x);
+        }
+        else {
+            document.writeln("Phương trình có 2 nghiệm phân biệt")
+            let x1 = (-b + Math.sqrt(delta)) / (2*a);
+            let x2 = (-b - Math.sqrl(delta)) / (2*a);
+            document.writeln(" x1= ", +x1);
+            document.writeln(" x2= ", +x2);
+        }
+    </script>
+</body>
+</html>
