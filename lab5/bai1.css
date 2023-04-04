@@ -1,0 +1,71 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: rgb(111, 226, 226);
+    padding: 20px;
+    margin: auto;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+label {
+    font-size: small;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#task-name {
+    margin-bottom: 20px;
+}
+
+#task-description {
+    margin-bottom: 10px;
+}
+
+.buttonrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.btn {
+    padding: 3px 20px 3px 20px;
+    border: 0px;
+    background-color: green;
+    color: white;
+    box-shadow: 3px 3px 3px rgb(1, 96, 1);
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 128, 0, 0.833);
+}
+
+.btn-disabled {
+    background-color: gold;
+    color: black;
+    box-shadow: 3px 3px 3px rgb(74, 75, 74);
+}
+
+.btn-disabled:hover {
+    background-color: rgba(118, 247, 13, 0.943);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 30% 40% 15% 15%;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai1.css">
+    <script src="bai1.js"></script>
+</head>    
+<body>
+    
+<!-- container of dodo list -->
+<div class="wrapper">
+    <span class="title">TODO LIST</span>
+    <label for="">Task Name:</label>
+    <input type="text" name="task-name" id="task-name" placeholder="Enter task name">
+    <label for="" class="description">Description:</label>
+    <textarea name="task-description" id="task-description" cols="30" rows="10"
+        placeholder="Enter description of the task"></textarea>
+    <div class="buttonrow">
+        <button id="btnAdd" class="btn btn-disabled" disabled="true">Add</button>
+    </div>
+    <h5>Tasks List:</h5>
+    <section id="task-list">
+        <div class="row">
+            <div class="name">Name</div>
+            <div class="des">Description</div>
+            <div class="del">Del</div>
+            <div class="edit">Edit</div>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>
