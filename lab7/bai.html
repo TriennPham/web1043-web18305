@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            background-color: rgb(255, 175, 1);
+            width: 50%;
+            
+        }
+        .left{
+            border: 5px solid rgb(0, 250, 0);
+            width: 180px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .right{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .item{
+            width: 150px;
+            height: 40px;
+            border: dashed red;
+            margin-bottom: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Drag and drop</h1>
+        <p>Drag the list items over the dustbin, and drop them to have the bin eat the item</p>
+        <div class="main">
+            <div class="left" id="a">
+                
+            </div>
+            <div class="right">
+                <span class="item" id="one">ONE</span>
+                <span class="item" id="two">TWO</span>
+                <span class="item" id="three">THREE</span>
+                <span class="item" id="four">FOUR</span>
+                <span class="item" id="five">FIVE</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
