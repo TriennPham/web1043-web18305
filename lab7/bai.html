@@ -6,11 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .wrapper{
+            width: 50%;
+            background-color: rgb(255, 196, 0);
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
         .main{
             display: flex;
             flex-direction: row;
             justify-content: left;
-            background-color: rgb(255, 175, 1);
             width: 50%;
             
         }
@@ -45,7 +52,7 @@
         <p>Drag the list items over the dustbin, and drop them to have the bin eat the item</p>
         <div class="main">
             <div class="left" id="a">
-                
+                A
             </div>
             <div class="right">
                 <span class="item" id="one">ONE</span>
@@ -56,6 +63,30 @@
             </div>
         </div>
     </div>
-    
+     
+  
+    <script>
+        // drag
+        let items=document.getElementsByClassName("item");
+        for(let i=0;i<items.length;i++){
+            let item=items[i];
+            item.setAttribute("draggable",true);
+            item.addEventListener("dragstart",(e)=>{
+                e.dataTransfer.setData("itemId",item.id);
+            })
+        }
+        // drop
+        let bin=document.getElementById("a");
+        bin.addEventListener("dragover",(e)=>{
+            if(e.preventDefault) e.preventDefault();// allow to drop
+        });
+        bin.addEventListener("drop",(e)=>{
+            let itemId=e.dataTransfer.getData("itemId");
+            let draggingItem= document.getElementById(itemId);
+            e.target.appendChild(draggingItem);
+        })
+    </script>
+</body>
+</html>
 </body>
 </html>
