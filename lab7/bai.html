@@ -76,11 +76,11 @@
             })
         }
         // drop
-        let bin=document.getElementById("a");
-        bin.addEventListener("dragover",(e)=>{
+        let a=document.getElementById("a");
+        a.addEventListener("dragover",(e)=>{
             if(e.preventDefault) e.preventDefault();// allow to drop
         });
-        bin.addEventListener("drop",(e)=>{
+        a.addEventListener("drop",(e)=>{
             let itemId=e.dataTransfer.getData("itemId");
             let draggingItem= document.getElementById(itemId);
             e.target.appendChild(draggingItem);
