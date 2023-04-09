@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="player">
+        <video id="video" src="video.mp4"></video>
+        <div class="controls">
+           <button id="play-pause">Play</button>     
+           <button id="stop">Stop</button>
+           <button id="mute">Mute</button>
+           <button id="loop">Loop</button>
+           <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
+    </div>
+    <script>
+        var video = document.getElementById("video");
+        var playPauseButton = document.getElementById("play-pause");
+        var stopButton = document.getElementById("stop");
+        var muteButton = document.getElementById("mute");
+        var loopButton = document.getElementById("loop");
+        var volumeSlider = document.getElementById("volume");
+
+// Play/Pause
+playPauseButton.addEventListener("click", function() {
+  if (video.paused) {
+    video.play();
+    playPauseButton.innerHTML = "Pause";
+  } else {
+    video.pause();
+    playPauseButton.innerHTML = "Play";
+  }
+});
+
+// Stop
+stopButton.addEventListener("click", function() {
+  video.pause();
+  video.currentTime = 0;
+  playPauseButton.innerHTML = "Play";
+});
+
+// Mute/Unmute
+muteButton.addEventListener("click", function() {
+  if (video.muted) {
+    video.muted = false;
+    muteButton.innerHTML = "Mute";
+  } else {
+    video.muted = true;
+    muteButton.innerHTML = "Unmute";
+  }
+});
+
+// Volume
+volumeSlider.addEventListener("change", function() {
+  video.volume = volumeSlider.value;
+});
+
+// Loop
+loopButton.addEventListener("click", function() {
+  if (video.loop) {
+    video.loop = false;
+    loopButton.innerHTML = "Loop";
+  } else {
+    video.loop = true;
+    loopButton.innerHTML = "Unloop";
+  }
+});
+
+    </script>
+</body>
+</html>
