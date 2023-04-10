@@ -12,6 +12,7 @@
         <div class="controls">
            <button id="play-pause">Play</button>     
            <button id="stop">Stop</button>
+           <button id="replay">Replay</button>
            <button id="mute">Mute</button>
            <button id="loop">Loop</button>
            <input id="volume" type="range" min="0" max="1" step="0.1" value="1">
@@ -20,6 +21,7 @@
         var video = document.getElementById("video");
         var playPauseButton = document.getElementById("play-pause");
         var stopButton = document.getElementById("stop");
+        var replayButton = document.getElementById("replay");
         var muteButton = document.getElementById("mute");
         var loopButton = document.getElementById("loop");
         var volumeSlider = document.getElementById("volume");
@@ -41,6 +43,14 @@ stopButton.addEventListener("click", function() {
   video.currentTime = 0;
   playPauseButton.innerHTML = "Play";
 });
+
+// Replay
+replayButton.addEventListener("click", function() {
+  video.currentTime = 0;
+  video.play();
+});
+
+
 
 // Mute/Unmute
 muteButton.addEventListener("click", function() {
