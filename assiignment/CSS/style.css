@@ -56,13 +56,9 @@ body {
     color: white;    
     text-transform: uppercase;
 }
-.about-section{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-.about-section .card, 
-.about-section .card img{
-    border-radius: 0.25rem;
+.abc{
+    text-align: center;
+    color : rgb(168, 44, 72);
 }
 .food-type{
     padding-top: 3.25rem;
@@ -74,14 +70,7 @@ body {
     font-weight:bold;
     list-style: none;
 }
-.story-section{
-    width:100%;
-    background: url("../Images/bg/bg-2.jpg") no-repeat center;
-    text-align: center;
-}
-.story-section h2{
-    color:rgb(168, 44, 72) ;
-}
+
 .explore-section{
     text-align: center;
 
@@ -223,10 +212,13 @@ body {
 }
 #contact {
     background: #f7f7f7;
-    padding: 80px 0 40px 0;
+    padding: 20px 0 0 0;
   }
   #contact .info {
     color: #333333;
+  }
+  #contact .section-title{
+    color: rgb(168, 44, 72);
   }
   #contact .info i {
     font-size: 32px;
@@ -236,7 +228,7 @@ body {
   }
   #contact .info p {
     padding: 0 0 10px 50px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     line-height: 22px;
     font-size: 14px;
   }
@@ -262,4 +254,9 @@ body {
   #contact .social-links a:hover {
     background: #006b95;
     color: #fff;
+  }
+  .img-fluid:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
   }
